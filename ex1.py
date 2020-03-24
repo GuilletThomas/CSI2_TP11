@@ -5,21 +5,21 @@ class Cercle:
     def GetRayon(self):
         return self.__rayon
 
-    def __add__(self, C):
-        return Cercle(self.__rayon+C.__rayon)
+    def __add__(self, other):
+        return Cercle(self.__rayon+other.__rayon)
 
-    def __lt__(self, C):
-        return self.__rayon < C.__rayon
+    def __lt__(self, other):
+        return self.__rayon < other.__rayon
 
-    def __gt__(self, C):
-        return self.__rayon > C.__rayon
+    def __gt__(self, other):
+        return self.__rayon > other.__rayon
 
 if __name__ == '__main__':
-    C1 = Cercle(2)
-    C2 = Cercle(3)
-    C3 = C1 + C2
-    C4 = C1 < C2
-    C5 = C2 > C3
-    print(C3)
-    print(C4)
-    print(C5)
+    c1 = Cercle(2)
+    c2 = Cercle(3)
+    c3 = c1 + c2
+    c4 = c1 < c2
+    c5 = c2 > c3
+    print(c3)
+    print(c4)
+    print(c5)
