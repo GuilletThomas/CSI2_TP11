@@ -16,7 +16,7 @@ class Complex:
         return Complex(self.__realPart / other.__realPart, self.__imPart / other.__imPart)
 
     def __abs__(self):
-        return [(self.__realPart)**2 + (self.__imPart)**2]**(1/2)
+        return ((self.__realPart ** 2 + self.__imPart ** 2) ** 0.5)
 
     def __eq__(self, other):
         return self.__realPart == other.__realPart and self.__imPart == other.__imPart
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     c6 = c1/c2
     print(str(c6.getRe())+"+"+str(c6.getIm())+"i")
     c7 = abs(c1)
-    print(str(c4.getRe())+"+"+str(c4.getIm())+"i")
+    print(str(c7))
     c1 == c2
     c1 != c2
 
